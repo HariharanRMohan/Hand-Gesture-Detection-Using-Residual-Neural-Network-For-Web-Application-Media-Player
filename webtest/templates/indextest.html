@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-image: url("static/gg.jpg");
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            li {
+            float: left;
+            border-right:1px solid #bbb;
+            }
+
+            li:last-child {
+            border-right: none;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+            background-color: red;
+            }
+
+            .active {
+            background-color: #04AA6D;
+            }
+
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            font-size: 50px;
+            font-weight: 900;
+            font-family: "Copperplate";
+            color: wheat;
+            }
+
+            .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            }
+
+            .centerr {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            }
+
+            .centery {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            position: relative;
+            left: 410px;
+            top: 100px;
+    }
+        </style>
+    </head>
+    <body>
+
+        <ul>
+        <li><a class="active" href="{{ url_for('guidetohome') }}">Home</a></li>
+        <li><a href="{{ url_for('guidepage') }}">Guide To Use</a></li>
+        <li><a href="{{ url_for('aboutpage') }}">About</a></li>
+        </ul>
+
+        <!-- Container (Pic with Text) -->
+        <div class="container">
+            <img src="static/tt.jpg" style="width:45%;">
+            <div class="centered">Gesture Detection System To Control Media Player</div>
+        </div>
+
+        
+        <!--Container (Gesture Frame)-->
+        <div>
+
+            <!--img source with the video frame from webcam-->
+            <img src="{{ url_for('video') }}" width="50%" height="600" video class="centerr"/>
+      
+        </div>
+
+
+        <!--Container(Youtube Video)-->
+        <div class="centery">
+            <iframe width="50%" height="350" src="https://www.youtube.com/embed/UVWz45tHhfY"></iframe>
+        </div>
+    </body>
+</html>

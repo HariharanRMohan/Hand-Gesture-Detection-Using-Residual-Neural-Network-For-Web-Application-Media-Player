@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-image: url("static/gg.jpg");
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            li {
+            float: left;
+            border-right:1px solid #bbb;
+            }
+
+            li:last-child {
+            border-right: none;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+            background-color: red;
+            }
+
+            .active {
+            background-color: #04AA6D;
+            }
+
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            font-size: 40px;
+            font-weight: 900;
+            font-family: "Copperplate";
+            color:wheat;
+            }
+
+            .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            }
+
+            .w3-center_1{
+            font-family: "Times New Roman"; 
+            text-align: center;
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+            }
+
+            .w3-center_2{
+            font-family: "Times New Roman"; 
+            text-align: center;
+            }
+
+            .w3-center_a{
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+            }
+        </style>
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="{{ url_for('guidetohome') }}">Back To Home</a></li>
+            <li><a href="{{ url_for('guidepage') }}">Guide To Use</a></li>
+        </ul>
+
+        <!-- Container (Pic with Text) -->
+        <div class="container">
+            <img src="static/main.jpg" style="width:50%;">
+            <div class="centered">About The Project</div>
+        </div>
+
+        <!-- Container (About The Project) -->
+        <div class="w3-content w3-container w3-padding-64">
+            <h1 class="w3-center_1" style="color:rgb(93, 253, 0);"><b>About Our Project!!!</b></h1>
+            <p class="w3-center_a" style="color:rgb(93, 253, 0);"><b>The purpose of Hand Gesture Detection Using Residual Neural Network for 
+                Web Application Media Player project build is to advance the technology in gesture recognition. Beside using traditional ways, 
+                the world is looking for a new advance method to overtake the traditional method. From that, users will feel satisfied by using 
+                it in this technological era. Most of the people love to involve in media and entertainment activities and by integrating the 
+                project to them, the users feel new about this technology, and they can adapt into it quickly without any problem.</b>
+            </p>
+            
+            <p class="w3-center_a" style="color:rgb(93, 253, 0);"><b>This project has a strong strength that used Artificial Intelligence 
+                technique that involves gesture recognition. By having gesture recognition, it makes the user easier to control the media player.
+                While doing other things, they can control the player by using their hand only. This project gives user a new way to interact that
+                is like how they interact to the actual world. They feel natural and require neither interruption nor an additional device. This
+                project can be used for future upgrades as it can be used in car infotainment systems, video game consoles, and human-machine
+                interfaces. The basic fact is that gesture recognition technology is growing popularity, with no signs of slowing down anytime 
+                soon. The use of gesture recognition in the creation of interactive and compelling live experiences and enormous promise.</b>
+            </p>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container h-100">
+                <div class="small text-center text-muted">Copyright © 2022 - HAND GESTURE DETECTION USING RESIDUAL NEURAL NETWORK FOR WEB APPLICATION MEDIA PLAYER   
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

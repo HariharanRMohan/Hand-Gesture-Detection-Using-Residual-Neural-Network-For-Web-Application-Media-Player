@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-image: url("static/gg.jpg");
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            li {
+            float: left;
+            border-right:1px solid #bbb;
+            }
+
+            li:last-child {
+            border-right: none;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+            background-color: red;
+            }
+
+            .active {
+            background-color: #04AA6D;
+            }
+
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            font-size: 40px;
+            font-weight: 900;
+            font-family: "Copperplate";
+            color: wheat;
+            }
+
+            .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            }
+
+            .w3-center_1{
+            font-family: "Times New Roman"; 
+            text-align: center;
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+            }
+
+            .w3-center_2{
+            font-family: "Times New Roman"; 
+            text-align: center;
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+            }
+
+            .w3-center{
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+            }
+        </style>
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="{{ url_for('guidetohome') }}">Back To Home</a></li>
+            <li><a href="{{ url_for('aboutpage') }}">About</a></li>
+        </ul>
+
+        <!-- Container (Pic with Text) -->
+        <div class="container">
+            <img src="static/letter.jpeg" style="width:50%;">
+            <div class="centered">How To Use The Gesture System</div>
+        </div>
+
+        <!-- Container (About Gesture Flow Part) -->
+        <div class="w3-content w3-container w3-padding-64">
+            <h1 class="w3-center_1" style="color:rgb(93, 253, 0);"><b>How To Use The System</b></h1>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>1. First of all, open the website and wait for the frame appear.</b></h2>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>2. Then, if you didn't allow camera to use, please allow it.</b></h2>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>3. Next, refer to the guide page on what gestures that can be performed.</b></h2>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>4. Later, go back to the main page and click play button to play YouTube.</b></h2>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>5. Finally, control the YouTube player using your hand gestures.</b></h2>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);"><b>HAVE FUN!!!</b></h2>
+        </div>
+
+        <!-- Container (About Gesture Guide and Functions) -->
+        <div class="w3-content w3-container w3-padding-64">
+            <h1 class="w3-center_2" style="color:rgb(93, 253, 0);"><b>List Of Gesture To Control The Media Player</b></h1>
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">1.Drumming Fingers Function:Play And Pause!!!</h2>
+            <img src="static/drum.JPG" class="center"  alt="Drumming Fingers" width="300" height="300">
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">2.Sliding Two Fingers Up Function:Volume Up!!!</h2>
+            <img src="static/slide_up.JPG" class="center"  alt="Slide 2 fingers up" width="300" height="300">
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">3.Sliding Two Fingers Down Function:Volume Down!!!</h2>
+            <img src="static/slide_down.JPG" class="center"  alt="Slide 2 fingers down" width="300" height="300">
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">4.Stop Sign Function:Volume Mute!!!</h2>
+            <img src="static/stop.JPG" class="center"  alt="Stop sign" width="300" height="300">
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">5.Swiping Hand To The Left: Prev!!!</h2>
+            <img src="static/swipe_left.JPG" class="center"  alt="Swiping Left" width="300" height="300">
+            <h2 class="w3-center" style="color:rgb(93, 253, 0);">6.Swiping Hand To The Right: Next!!!</h2>
+            <img src="static/swipe_right.JPG" class="center"  alt="Swiping Right" width="300" height="300">
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+                <div class="container h-100">
+                    <div class="small text-center text-muted">Copyright © 2022 - HAND GESTURE DETECTION USING RESIDUAL NEURAL NETWORK FOR WEB APPLICATION MEDIA PLAYER   
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>
